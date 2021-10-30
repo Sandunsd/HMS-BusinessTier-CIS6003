@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://DataServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DataServices/">
+
+<xs:element name="addAppointment" type="tns:addAppointment" />
+
+<xs:element name="addAppointmentResponse" type="tns:addAppointmentResponse" />
+
+<xs:element name="addCustomer" type="tns:addCustomer" />
+
+<xs:element name="addCustomerResponse" type="tns:addCustomerResponse" />
+
+<xs:element name="addCustomerToLogin" type="tns:addCustomerToLogin" />
+
+<xs:element name="addCustomerToLoginResponse" type="tns:addCustomerToLoginResponse" />
+
+<xs:element name="addDocToLogin" type="tns:addDocToLogin" />
+
+<xs:element name="addDocToLoginResponse" type="tns:addDocToLoginResponse" />
+
+<xs:element name="authenticate" type="tns:authenticate" />
+
+<xs:element name="authenticateResponse" type="tns:authenticateResponse" />
+
+<xs:element name="checkDocEmail" type="tns:checkDocEmail" />
+
+<xs:element name="checkDocEmailResponse" type="tns:checkDocEmailResponse" />
+
+<xs:element name="checkDocUsername" type="tns:checkDocUsername" />
+
+<xs:element name="checkDocUsernameResponse" type="tns:checkDocUsernameResponse" />
+
+<xs:element name="checkEmail" type="tns:checkEmail" />
+
+<xs:element name="checkEmailResponse" type="tns:checkEmailResponse" />
+
+<xs:element name="checkUsername" type="tns:checkUsername" />
+
+<xs:element name="checkUsernameResponse" type="tns:checkUsernameResponse" />
+
+<xs:element name="customer" type="tns:customer" />
+
+<xs:element name="deleteAppointment" type="tns:deleteAppointment" />
+
+<xs:element name="deleteAppointmentResponse" type="tns:deleteAppointmentResponse" />
+
+<xs:element name="deleteDoctor" type="tns:deleteDoctor" />
+
+<xs:element name="deleteDoctorResponse" type="tns:deleteDoctorResponse" />
+
+<xs:element name="deletetheCustomer" type="tns:deletetheCustomer" />
+
+<xs:element name="deletetheCustomerResponse" type="tns:deletetheCustomerResponse" />
+
+<xs:element name="listAllCustopmers" type="tns:listAllCustopmers" />
+
+<xs:element name="listAllCustopmersResponse" type="tns:listAllCustopmersResponse" />
+
+<xs:element name="searchCustomer" type="tns:searchCustomer" />
+
+<xs:element name="searchCustomerResponse" type="tns:searchCustomerResponse" />
+
+<xs:element name="updatetheAppointment" type="tns:updatetheAppointment" />
+
+<xs:element name="updatetheAppointmentResponse" type="tns:updatetheAppointmentResponse" />
+
+<xs:element name="updatetheCustomer" type="tns:updatetheCustomer" />
+
+<xs:element name="updatetheCustomerResponse" type="tns:updatetheCustomerResponse" />
+
+<xs:element name="updatetheDoctor" type="tns:updatetheDoctor" />
+
+<xs:element name="updatetheDoctorResponse" type="tns:updatetheDoctorResponse" />
+
+<xs:complexType name="listAllCustopmers">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listAllCustopmersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="cusEmail" type="xs:string" minOccurs="0" />
+<xs:element name="cusUsername" type="xs:string" minOccurs="0" />
+<xs:element name="cusPassword" type="xs:string" minOccurs="0" />
+<xs:element name="cusNIC" type="xs:string" minOccurs="0" />
+<xs:element name="cusPhone" type="xs:string" minOccurs="0" />
+<xs:element name="cusDOB" type="xs:string" minOccurs="0" />
+<xs:element name="cusGender" type="xs:string" minOccurs="0" />
+<xs:element name="cusBloodType" type="xs:string" minOccurs="0" />
+<xs:element name="cusJoinDate" type="xs:string" minOccurs="0" />
+<xs:element name="cusEmerContact" type="xs:string" minOccurs="0" />
+<xs:element name="cusAddress" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomer">
+<xs:sequence>
+<xs:element name="user" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkEmail">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheCustomer">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0" />
+<xs:element name="nic" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="phone" type="xs:string" minOccurs="0" />
+<xs:element name="gender" type="xs:string" minOccurs="0" />
+<xs:element name="dob" type="xs:string" minOccurs="0" />
+<xs:element name="bloodType" type="xs:string" minOccurs="0" />
+<xs:element name="joinedDate" type="xs:string" minOccurs="0" />
+<xs:element name="emerContact" type="xs:string" minOccurs="0" />
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAppointment">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAppointmentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAppointment">
+<xs:sequence>
+<xs:element name="User" type="xs:string" minOccurs="0" />
+<xs:element name="Date" type="xs:string" minOccurs="0" />
+<xs:element name="Time" type="xs:string" minOccurs="0" />
+<xs:element name="Doctor" type="xs:string" minOccurs="0" />
+<xs:element name="Payment" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAppointmentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheAppointment">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="Time" type="xs:string" minOccurs="0" />
+<xs:element name="Payment" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheAppointmentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletetheCustomer">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletetheCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDoctor">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDoctorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomerToLogin">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomerToLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDocToLogin">
+<xs:sequence>
+<xs:element name="docName" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="phone" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDocToLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCustomer">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkDocUsername">
+<xs:sequence>
+<xs:element name="docName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkDocUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authenticate">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authenticateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheDoctor">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="docName" type="xs:string" minOccurs="0" />
+<xs:element name="phone" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatetheDoctorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkDocEmail">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkDocEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkUsername">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
